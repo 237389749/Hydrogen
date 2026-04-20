@@ -1318,7 +1318,7 @@ function 全屏()
   window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
   xpcall(function()
     lp = window.getAttributes();
-    lp.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+    lp.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_ALWAYS;
     window.setAttributes(lp);
   end,
   function(e)
@@ -1354,7 +1354,7 @@ function 取消全屏()
   --[[
   xpcall(function()
     lp = window.getAttributes();
-    lp.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER;
+    lp.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_ALWAYS;
     window.setAttributes(lp);
   end,
   function(e)
